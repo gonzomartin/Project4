@@ -1,0 +1,30 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: nowrap; It apply no wrap when you reduce the size*/
+flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.box {
+  background-color: #8ea86e;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  flex: 1 1 200px; /* Genera que los item dentro del cotenedor tenga un tama;o especifico dentro del max-width. Son 4 elementos por ende se reparte el area entre 4 y se asigna el calor de 1 a cada una. */
+}
+
+.box1 {
+  /* order: -1; will place at start
+  order: 0; default value */
+  /* order: 1; /* will place item at the last position
+  flex-grow: 2;*/
+}
