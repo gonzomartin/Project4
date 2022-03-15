@@ -7,24 +7,49 @@ body {
   background-color: #efefef;
   display: flex;
   flex-direction: row;
-  /* flex-wrap: nowrap; It apply no wrap when you reduce the size*/
-flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1140px;
 }
 
 .box {
-  background-color: #8ea86e;
   color: #fff;
-  border-radius: 5px;
   padding: 20px;
   text-align: center;
   margin: 10px;
-  flex: 1 1 200px; /* Genera que los item dentro del cotenedor tenga un tama;o especifico dentro del max-width. Son 4 elementos por ende se reparte el area entre 4 y se asigna el calor de 1 a cada una. */
+  flex: 1 1 auto;
+  height: 600px;
 }
 
 .box1 {
-  /* order: -1; will place at start
-  order: 0; default value */
-  /* order: 1; /* will place item at the last position
-  flex-grow: 2;*/
+  background-color: blue;
+}
+.box2 {
+  background-color: purple;
+}
+.box3 {
+  background-color: grey;
+  display: block;
+}
+.box4 {
+  background-color: brown;
+  display: block;
+}
+
+@media screen and (max-width: 641px) {
+  .container {
+    flex-direction: column;
+  }
+  .box1 {
+    background-color: pink;
+  }
+  .box2 {
+    background-color: red;
+  }
+  .box3 {
+    display: none;
+  }
+  .box4 {
+    display: none;
+  }
+
+
 }
